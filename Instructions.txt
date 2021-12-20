@@ -1,0 +1,13 @@
+Hello There!
+
+I don't have the money nor knowhow to manage a domain, 
+So here is a zip folder you just opened!
+
+All you should have to do for this to work properly,
+is to unzip the folder, 
+and click the html file named "index".
+
+It SHOULD work with just those two steps.
+If it doesn't, welp. 
+
+Anyways, have fun!
