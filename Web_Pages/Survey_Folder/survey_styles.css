@@ -1,0 +1,114 @@
+body {
+  background-color: rgb(235, 249, 255);
+}
+
+/*Makes main heading sticky*/
+.sticky {
+  height: 70px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2; /*Places sticky heading over heading 3 line*/
+}
+
+/*Title of page*/
+h1 {
+  text-align: center;
+  border: 10px solid lightblue;
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 50px;
+  font-family: Arial;
+  color: rgb(247, 252, 255);
+}
+
+/*Start of Placing Buttons*/
+.container {
+  height: 60px;
+  position: relative;
+  top: -85px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+#home {
+  position: relative;
+  width: 200px;
+  right: 130%;
+  height: 50px;
+  border-radius: 50px;
+  background-color: rgb(255, 204, 153);
+  color: grey;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#direct {
+  position: relative;
+  top: -50px;
+  width: 200px;
+  left: 170%;
+  height: 50px;
+  border-radius: 50px;
+  background-color: rgb(0, 153, 255);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+/*End of Placing Buttons*/
+
+h3 {
+  position: relative;
+  color: red;
+  font-size: 28px;
+  text-align: center;
+  font-family: Arial;
+  z-index: 1; /*Places heading 3 line behind sticky heading*/
+}
+
+/*Green part aka the actual form*/
+form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  border: 5px solid rgb(121, 237, 165);
+  background-color: rgb(121, 237, 165);
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+}
+
+/*Question labels*/
+h2 {
+  color: rgb(247, 22, 22);
+  font-family: Arial;
+  padding-top: 10px;
+}
+
+/*Questions*/
+p {
+  color: rgb(115, 60, 60);
+  font-family: Arial;
+  font-size: 18px;
+}
+
+/*Font of choice options*/
+.Options {
+  font-family: "Comic Sans MS";
+}
+
+textarea {
+  resize: vertical;
+}
+
+/*Submit button*/
+#submit {
+  border-radius: 50px;
+  background-color: rgb(46, 38, 125);
+  color: white;
+  font-weight: bold;
+  padding: 30px 15px;
+}
