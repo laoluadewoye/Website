@@ -11,3 +11,11 @@ It SHOULD work with just those two steps.
 If it doesn't, welp. 
 
 Anyways, have fun!
+-----------------------------------------------------------
+If seeing this on GitHub:
+
+You don't need to do anything above. 
+Just look below the list of files and check out read me folder. 
+It will have all the root links for each website I have created.
+I have figured out how to get myself a public online domain, so now I have this website for the time being.
+Enjoy!
