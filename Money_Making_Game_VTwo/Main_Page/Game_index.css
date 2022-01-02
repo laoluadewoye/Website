@@ -31,4 +31,5 @@ button {
   padding: 40px 90px;
   border-radius: 25%;
   background-image: url("Button_Dollar.jpg");
+  margin-bottom: 20px;
 }
