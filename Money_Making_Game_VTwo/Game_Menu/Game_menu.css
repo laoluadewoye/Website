@@ -68,6 +68,25 @@ h2 {
   opacity: 100%;
 }
 
+#gamblePage {
+  position: fixed;
+  top: 100px;
+  left: 0;
+
+  width: 110px;
+  height: 50px;
+  background-color: pink;
+  border-style: dotted;
+  opacity: 50%;
+}
+
+#gamblePage:hover {
+  background-color: grey;
+  color: white;
+  border-style: solid;
+  opacity: 100%;
+}
+
 /*Corner Buttons*/
 
 /*Button Style*/
@@ -144,6 +163,7 @@ button {
 .layer {
   background-color: aliceblue;
   text-align: center;
+  border-radius: 5%;
 }
 .hidden {
   display: none;
@@ -215,6 +235,7 @@ textarea {
   width: 75%;
   margin-left: 12.5%;
   margin-right: 12.5%;
+  border-radius: 10%;
 }
 
 .gambleSubLayer hr {
@@ -229,6 +250,7 @@ textarea {
   margin-left: 12.5%;
   margin-right: 12.5%;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 .blackjackSubLayer h2 {
   color: white;
