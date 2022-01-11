@@ -55,7 +55,7 @@ function boxing() {
   //fighter check
   if (fighter === 1 || fighter === 2) {
     //Three further checks needed - below 500 check, max check, and bonus below 0 check
-    if (box > 500) {
+    if (box >= 500) {
       if (box <= onHand) {
         //Establishing betting sides
         let team1 = Math.floor(Math.random() * 24);
