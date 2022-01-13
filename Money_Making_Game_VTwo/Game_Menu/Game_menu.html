@@ -3,8 +3,14 @@
   <head>
     <!--Metadata-->
     <meta charset="UTF-8" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Money, Bank, Savings, Game, Casino, Github"
+    />
+    <meta
+      name="description"
+      content="A game made in HTML/CSS/JavaScript where you try to get as much money as possible!"
+    />
     <meta name="author" content="Laolu A." />
     <!--No refresh so user doesn't lose progress-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,24 +30,29 @@
   <body>
     <!--Includes rule button, title of main game page, stats, and main six buttons-->
     <div class="mainLayer">
-      <div class="cornerButtons">
-        <a href="../Main_Page/Game_index.html" target="_blank">
-          <button id="rules" title="Leads back to Rules Page">Rules</button>
-        </a>
-        <a href="#"
-          ><button id="topPage" title="Leads to top of page">
-            Go Back Up
-          </button></a
-        >
-        <a href="#gambleLayer"
-          ><button
-            id="gamblePage"
-            onclick="togglegamble()"
-            title="leads back to casino buttons"
+      <div class="cbposition">
+        <div class="cornerButtons">
+          <a href="../Main_Page/Game_index.html" target="_blank">
+            <button id="rules" title="Leads back to Rules Page">Rules</button>
+          </a>
+          <a href="#"
+            ><button id="topPage" title="Leads to top of page">
+              Go Back Up
+            </button></a
           >
-            Go to Casino
-          </button></a
-        >
+          <a href="#gambleLayer"
+            ><button
+              id="gamblePage"
+              onclick="togglegamble()"
+              title="leads back to casino buttons"
+            >
+              Go to Casino
+            </button></a
+          >
+          <button id="editValues" title="Edit the game stats">
+            Edit Stats
+          </button>
+        </div>
       </div>
       <h1>Welcome to L.A. Bank! <br />(Not to be confused with Los Angeles)</h1>
       <div class="sameline">
@@ -392,6 +403,63 @@
     </div>
     <!--Div classes for main six buttons-->
 
+    <!--Popup Section-->
+    <div class="popupback">
+      <div class="popup">
+        <div class="close">+</div>
+
+        <!--This will have all messages moved here-->
+        <h3 id="message">This is a stat editing menu!</h3>
+        <p>You come here whenever you want to set your own starting point.</p>
+        <p>Or maybe you just want to continue off from a previous tab.</p>
+        <p>
+          Whatever it is, press submit to submit any changes! Or exit out if you
+          to let it play out.
+        </p>
+        <p>
+          If you wanna keep certain vales the same as before, make sure to enter
+          those values as shown on the screen.
+        </p>
+
+        <!--User enters stats-->
+        <div class="popupflexinputs">
+          <h4>Day</h4>
+          <input
+            type="text"
+            name="customday"
+            id="customday"
+            placeholder="Enter number (i.e. 5)"
+          />
+          <h4>On Hand Cash</h4>
+          <input
+            type="text"
+            name="customhand"
+            id="customhand"
+            placeholder="Enter number (i.e. 1000)"
+          />
+          <h4>Bank Amount</h4>
+          <input
+            type="text"
+            name="custombank"
+            id="custombank"
+            placeholder="Enter number (i.e. 500)"
+          />
+          <h4>Savings</h4>
+          <input
+            type="text"
+            name="customsave"
+            id="customsave"
+            placeholder="Enter number (i.e. 500)"
+          />
+          <br />
+          <br />
+          <button id="submitCustom" class="submitbuttons">Submit</button>
+        </div>
+      </div>
+    </div>
+    <!--Popup section-->
+
+    <!--Menu (toggling) script-->
     <script src="Game_menu.js"></script>
 
     <!--Game execution folder-->
