@@ -19,6 +19,24 @@ function print() {
   document.getElementById("heading_savings").innerHTML = "Savings: $" + saving;
 }
 
+//Customizing values
+function popupcustom() {
+  time = parseInt(document.getElementsByName("customday")[0].value);
+  onHand = parseInt(document.getElementsByName("customhand")[0].value);
+  bank = parseInt(document.getElementsByName("custombank")[0].value);
+  saving = parseInt(document.getElementsByName("customsave")[0].value);
+
+  document.getElementById("time").innerHTML = "Day: " + time; //No time increment
+  document.getElementById("pocketCash").innerHTML = "On Hand Cash: $" + onHand;
+  document.getElementById("bankCash").innerHTML = "Bank Amount: $" + bank;
+  document.getElementById("heading_savings").innerHTML = "Savings: $" + saving;
+
+  document.querySelector(".popupback").style.display = "none"; //Close it at the end
+}
+
+let popdetect = document.getElementById("submitCustom");
+popdetect.addEventListener("click", popupcustom);
+
 //Take user back to top of page
 function topFunction() {
   document.body.scrollTop = 0;
