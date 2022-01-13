@@ -1,6 +1,6 @@
 /*
-  Execution script - Includes core stats, stat updating, page scrolling, belowZero, 
-  Withdraw, Deposit, Savings, and Transfer
+  Execution script - Manages core stats, stat updating, page scrolling, belowZero, 
+  Withdraw, Deposit, Savings, Transfer, and the popup menu
   */
 
 //Main values
@@ -19,17 +19,41 @@ function print() {
   document.getElementById("heading_savings").innerHTML = "Savings: $" + saving;
 }
 
-//Customizing values
+//Customizing values with Popup menu
+function popupvalidate(num) {
+  //Validates custom user stat inputs
+  num = parseInt(num);
+  if (isNaN(num)) {
+    //Checks if integer is put in
+    num = 0;
+  }
+  if (num < 0) {
+    //Checks if that integer is greater than zero
+    alert(
+      "Entered negative value for this. I can't stop you but I can show this annoying alert every time you do it."
+    );
+    num = 0;
+  }
+
+  return num;
+}
+
 function popupcustom() {
-  time = parseInt(document.getElementsByName("customday")[0].value);
-  onHand = parseInt(document.getElementsByName("customhand")[0].value);
-  bank = parseInt(document.getElementsByName("custombank")[0].value);
-  saving = parseInt(document.getElementsByName("customsave")[0].value);
+  time = document.getElementsByName("customday")[0].value;
+  onHand = document.getElementsByName("customhand")[0].value;
+  bank = document.getElementsByName("custombank")[0].value;
+  saving = document.getElementsByName("customsave")[0].value;
+
+  time = popupvalidate(time);
+  onHand = popupvalidate(onHand);
+  bank = popupvalidate(bank);
+  saving = popupvalidate(saving);
 
   document.getElementById("time").innerHTML = "Day: " + time; //No time increment
   document.getElementById("pocketCash").innerHTML = "On Hand Cash: $" + onHand;
   document.getElementById("bankCash").innerHTML = "Bank Amount: $" + bank;
   document.getElementById("heading_savings").innerHTML = "Savings: $" + saving;
+  //No need for calculating interest growth
 
   document.querySelector(".popupback").style.display = "none"; //Close it at the end
 }
