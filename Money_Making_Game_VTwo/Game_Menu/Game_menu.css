@@ -30,35 +30,30 @@ h2 {
 }
 /*Heading 2 - Statistics*/
 
+a:link {
+  text-decoration: none;
+}
+
 /*Corner Buttons*/
-#rules {
+.cbposition {
   position: fixed;
   top: 0;
   left: 0;
+}
 
+.cornerButtons button {
   width: 110px;
   height: 50px;
   background-color: pink;
   border-style: dotted;
-  opacity: 50%;
+  opacity: 35%;
+  display: block;
 }
 
 #rules:hover {
   background-color: rgb(72, 155, 24);
   border-style: solid;
   opacity: 100%;
-}
-
-#topPage {
-  position: fixed;
-  top: 50px;
-  left: 0;
-
-  width: 110px;
-  height: 50px;
-  background-color: pink;
-  border-style: dotted;
-  opacity: 50%;
 }
 
 #topPage:hover {
@@ -68,21 +63,15 @@ h2 {
   opacity: 100%;
 }
 
-#gamblePage {
-  position: fixed;
-  top: 100px;
-  left: 0;
-
-  width: 110px;
-  height: 50px;
-  background-color: pink;
-  border-style: dotted;
-  opacity: 50%;
-}
-
 #gamblePage:hover {
   background-color: grey;
   color: white;
+  border-style: solid;
+  opacity: 100%;
+}
+
+#editValues:hover {
+  background-color: rgb(255, 109, 133);
   border-style: solid;
   opacity: 100%;
 }
@@ -263,3 +252,53 @@ textarea {
   height: 50px;
 }
 /*Section for Blackjack Alone - Structure, font color, alignment, and buttons respectively*/
+
+/*Popup Section*/
+.popupback {
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*Add transition bit l8r*/
+}
+
+.popup {
+  min-width: 300px;
+  width: 33%;
+  height: auto;
+  background-color: whitesmoke;
+  border-radius: 7px;
+  position: relative;
+  text-align: center;
+  padding: 25px;
+}
+
+.popup h3 {
+  font-family: monospace;
+  font-size: 18px;
+}
+
+h4 {
+  font-family: monospace;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-weight: bolder;
+  font-size: xx-large;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+#message {
+  margin-top: 40px;
+}
+/*Popup Section*/
