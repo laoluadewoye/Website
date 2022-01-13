@@ -133,3 +133,13 @@ function togglebigone() {
   }
 }
 //Ending of Gamble Button Toggling
+
+//Toggling stat editing popup screen
+document.getElementById("editValues").addEventListener("click", function () {
+  window.location.href = "#";
+  document.querySelector(".popupback").style.display = "flex";
+});
+
+document.querySelector(".close").addEventListener("click", function () {
+  document.querySelector(".popupback").style.display = "none";
+});
