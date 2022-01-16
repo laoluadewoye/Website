@@ -1,7 +1,7 @@
 To access the webpages, please manually copy the link and paste them into your web browser. 
 It will take you through the directory of my website to the starting webpages.
 
-# laoluadewoye.github.io/index.html
+# laoluadewoye.github.io/Main/index.html
 This is the main webpage of my website. It leads to a simple calculator, and various other things I created to learn and practice HTML. 
 
 The current list of webpages is:
