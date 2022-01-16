@@ -1,0 +1,39 @@
+/*Basic stuff carried over*/
+body {
+  background-color: rgb(222, 253, 253);
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  border-left: 7px solid dodgerblue;
+  padding-left: 15px;
+  font-size: 40px;
+}
+
+h2 {
+  border-left: 7px solid orange;
+  text-align: center;
+}
+
+p {
+  border-left: 7px solid lightcoral;
+  padding-left: 15px;
+  font-size: larger;
+}
+
+img {
+  width: 275px;
+  height: 130px;
+}
+/*Basic stuff carried over*/
+
+.center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  float: left;
+}
