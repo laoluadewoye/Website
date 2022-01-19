@@ -24,14 +24,30 @@
         text-align: center;
         font-family: Courier;
         color: Thistle;
+        font-size: xxx-large;
       }
 
+      /*Parent formatting of main part of page*/
+      .sameline {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section {
+        float: left;
+        margin: 0 auto;
+      }
+
+      /*Parent formatting of main part of page*/
+
       /* Beginnning of Looks for instruction bits */
-      div.Instruct {
+      #Instruct {
         color: pink;
       }
 
-      p {
+      h2 {
         padding-left: 25px;
         font-size: 40px;
         font-family: gabriola;
@@ -47,10 +63,8 @@
       /* End of Looks for instruction bits */
 
       /*Beginnning of designing the input boxes and button*/
-      form {
-        position: absolute;
-        top: 100px;
-        left: 600px;
+      #Names {
+        text-align: center;
       }
 
       label {
@@ -65,115 +79,146 @@
         border: none;
         color: purple;
         padding: 15px 32px;
-        text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         position: relative;
-        left: 45px;
       }
       /*Ending of designing the input boxes and button*/
 
-      div.Output {
-        position: absolute;
-        top: 100px;
-        left: 850px;
+      /*Formating the Output Section*/
+      #Output {
         text-align: center;
-        margin: 0px;
         font-family: gabriola;
+        line-height: 1.2em;
+      }
+
+      #result {
+        font-size: 50px;
         font-weight: bold;
         color: rgb(212, 83, 255);
       }
 
-      div.Result_Two {
+      #result2 {
         position: relative;
-        top: -110px;
+        font-size: 80px;
         color: rgb(255, 83, 226);
         font-weight: bolder;
       }
+      /*Formating the Output Section*/
 
-      div.Links {
+      /*For image links*/
+      .links section {
         text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
       }
 
-      #main {
-        position: relative;
-        right: 125px;
+      .links img {
+        width: 350px;
+        height: 250px;
       }
 
-      #direct {
-        position: relative;
-        left: 125px;
+      /*Now have basic understanding of what @ does*/
+      @media (max-width: 930px) {
+        .links {
+          flex-wrap: wrap;
+          margin-left: 50%;
+          margin-right: 50%;
+        }
       }
+      /*For image links*/
     </style>
   </head>
   <body>
-    <h1>Welcome to a Name Matchmaker!</h1>
+    <h1>Welcome to my Name Matchmaker!</h1>
     <!--title of webpage-->
-
-    <div class="Instruct">
-      <p>Instructions: <br /></p>
-      <ol>
-        <li>
-          Put two first names into the boxes. <strong>No last names!!!</strong>
-        </li>
-        <li>Make sure the names are <strong>completely</strong> lowercase!</li>
-        <li>Press the submit button when finished.</li>
-        <li>
-          Find out how compatible you are with someone &hearts;&hearts;&hearts;
-        </li>
-      </ol>
+    <div class="sameline">
+      <!--Instructions-->
+      <section id="Instruct">
+        <header><h2>Instructions:</h2></header>
+        <ol>
+          <li>
+            Put two first names into the boxes.
+            <strong>No last names!!!</strong>
+          </li>
+          <li>
+            Make sure the names are <strong>completely</strong> lowercase!
+          </li>
+          <li>Press the submit button when finished.</li>
+          <li>
+            Find out how compatible you are with someone
+            &hearts;&hearts;&hearts;
+          </li>
+        </ol>
+      </section>
+      <!--Instructions-->
+      <!--Input-->
+      <section id="Names">
+        <form>
+          <!--input boxes-->
+          <label for="fname">First name:</label><br />
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="jake"
+            style="width: 200px"
+          /><br /><br />
+          <label for="sname">Second name:</label><br />
+          <input
+            type="text"
+            id="sname"
+            name="sname"
+            placeholder="stacy"
+            style="width: 200px"
+          /><br /><br /><br />
+          <button
+            type="submit"
+            id="submit"
+            value="Submit"
+            title="Submit Button"
+          >
+            Submit
+          </button>
+        </form>
+      </section>
+      <!--Input-->
+      <!--Output-->
+      <section id="Output">
+        <p id="result"></p>
+        <p id="result2"></p>
+      </section>
+      <!--Output-->
     </div>
 
-    <form>
-      <!--input boxes-->
-      <label for="fname">First name:</label><br />
-      <input
-        type="text"
-        id="fname"
-        name="fname"
-        placeholder="jake"
-        style="width: 200px"
-      /><br /><br />
-      <label for="sname">Second name:</label><br />
-      <input
-        type="text"
-        id="sname"
-        name="sname"
-        placeholder="stacy"
-        style="width: 200px"
-      /><br /><br /><br />
-      <button type="submit" id="submit" value="Submit" title="Submit Button">
-        Submit
-      </button>
-    </form>
-    <div class="Links">
-      <label id="main">Main Page</label> <label id="direct">Directory</label
-      ><br />
-      <a href="../index.html" target="_blank"
-        ><img
-          src="../Pictures/Directory_Images/Home.jpeg"
-          width="350"
-          height="250"
-          class="center"
-          alt="Home Page Link"
-          title="Leads to home page."
-      /></a>
-      <a href="directory.html" target="_blank"
-        ><img
-          src="../Pictures/Directory_Images/Directory.jpeg"
-          width="350"
-          height="250"
-          alt="Directory Page Link"
-          title="Leads to directory page."
-      /></a>
-    </div>
-    <div class="Output">
-      <p id="result"></p>
-      <div class="Result_Two">
-        <p id="result2" style="font-size: 72px"></p>
+    <!--Links to other sites-->
+    <div class="sameline">
+      <div class="links">
+        <section>
+          <label>Main Page</label>
+          <br />
+          <a href="../index.html" target="_blank"
+            ><img
+              src="../Pictures/Directory_Images/Home.jpeg"
+              class="center"
+              alt="Home Page Link"
+              title="Leads to home page."
+          /></a>
+        </section>
+        <section>
+          <label>Directory</label>
+          <br />
+          <a href="directory.html" target="_blank"
+            ><img
+              src="../Pictures/Directory_Images/Directory.jpeg"
+              alt="Directory Page Link"
+              title="Leads to directory page."
+          /></a>
+        </section>
       </div>
     </div>
+    <!--Links to other sites-->
 
     <script type="text/javascript">
       function letterCount(name) {
