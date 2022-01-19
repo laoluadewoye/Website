@@ -63,26 +63,25 @@
       /*Adjusting position of text boxes*/
       form {
         padding-left: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 25px auto;
       }
 
-      div.Pep_Picture {
-        position: absolute;
-        top: 250px;
-        left: 300px;
+      form input {
+        margin: 10px;
       }
-      div.Kat {
-        position: absolute;
-        top: 250px;
-        left: 600px;
-      }
+      /*Adjusting position of text boxes*/
 
+      /*Font for Directory List link*/
       h4 {
         font-family: sans-serif;
         color: #5276ff;
       }
 
+      /*Directory Section*/
       div.DirectoryList {
-        position: absolute;
         text-align: center;
         top: 240px;
         left: 950px;
@@ -92,6 +91,31 @@
         border: 8px solid rgb(238, 182, 230);
         border-radius: 50px;
       }
+
+      .center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section {
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      /*Directory Section*/
+
+      /*The two images*/
+      .miscimage {
+        margin: 20px;
+        text-align: center;
+      }
+
+      .miscimage img {
+        margin: 20px;
+      }
+      /*The two images*/
     </style>
     <!--End of style-->
   </head>
@@ -106,40 +130,40 @@
       Note: Can only user integers as input
     </p>
     <h2>Addition(+) : Subtraction(-) : Multiplication(*) : Division(/)</h2>
+
     <div class="DirectoryList">
       <a href="Web_Pages/Directory_Folder/directory.html"
         ><h4 title="Leads to the website directory.">Directory:</h4></a
       >
-      <p>More images</p>
-      <a href="Web_Pages/images.html" target="_blank"
-        ><img
-          src="Pictures/Directory_Images/Image_Label.jpg"
-          alt="Image Label"
-          title="Leads to more images!"
-          style="width: 200px; padding-top: 5px"
-      /></a>
-      <p>Matchmaker</p>
-      <a href="Web_Pages/matchmaker.html" target="_blank"
-        ><img
-          src="Pictures/Directory_Images/Matchmaker_Icon.jpg"
-          alt="Matchmaker Label"
-          title="Leads to matchmaker page."
-          style="width: 200px"
-      /></a>
+      <div class="center">
+        <section>
+          <p>More images</p>
+          <a href="Web_Pages/images.html" target="_blank"
+            ><img
+              src="Pictures/Directory_Images/Image_Label.jpg"
+              alt="Image Label"
+              title="Leads to more images!"
+              style="width: 200px; padding-top: 5px"
+          /></a>
+        </section>
+        <section>
+          <p>Matchmaker</p>
+          <a href="Web_Pages/matchmaker.html" target="_blank"
+            ><img
+              src="Pictures/Directory_Images/Matchmaker_Icon.jpg"
+              alt="Matchmaker Label"
+              title="Leads to matchmaker page."
+              style="width: 200px"
+          /></a>
+        </section>
+      </div>
     </div>
-
-    <!--
-'type' designates input format
-'name' or 'id' is the identifier
-'title' is that text you see when you hover over something for a while
-'placeholder' is self explanitory text
--->
-
-    <!--Creating the text boxes and interactive button-->
+    <!--Heading of web page-->
+    <!--Actual form-->
     <form name="calculator">
       <h3>First number:</h3>
       <input
-        type="text"
+        type="number"
         name="numone"
         title="First number in operation. Important in sub and div."
         placeholder="23"
@@ -147,7 +171,7 @@
       <br />
       <h3>Second number:</h3>
       <input
-        type="text"
+        type="number"
         name="numtwo"
         title="Second number in operation."
         placeholder="3"
@@ -166,16 +190,15 @@
         Enter
       </button>
     </form>
+    <!--Actual form-->
 
-    <div class="Pep_Picture">
+    <div class="miscimage">
       <a href="https://doge2048.com/" target="_blank"
         ><img
           src="Pictures/Pepperoni_Doge.png"
           alt="Pepperoni Doge God"
           title="Doge 2024 Game"
       /></a>
-    </div>
-    <div class="Kat">
       <img
         src="Pictures/Mask_Kitty.jpg"
         alt="Mask Kitty"
