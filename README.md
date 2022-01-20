@@ -21,6 +21,8 @@ This is a game I made completely from scratch.
 It is a recreation of the Python game, as the average would prefer an actual website/User Interface than to play in a Command Line.
 It is being updated as frequent as I find errors in the game and if I desire to update/change the design.
 
+<hr>
+
 I will update my website ever so often if I see anything I want to add or change. If you have any suggestions yourself, please email me at laoluadewoye@gmail.com. 
 
 I know I put a Survey page but I then realized I did not know how to save the results to a database. As of right now (01/20/22) it is just for show while I decide how I want to go about the problem. 
