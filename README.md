@@ -1,5 +1,6 @@
-To access the webpages, please manually copy the link and paste them into your web browser. 
-It will take you through the directory of my website to the starting webpages.
+To access the webpages, click the links below. 
+If that does not work, please manually copy the link and paste them into your web browser. 
+It will take you through the folders of my website to the starting webpages.
 
 # https://laoluadewoye.github.io/Main/Web_Pages/Directory_Folder/directory.html
 If you want to go straight to the directory of my website to decide for yourself, go right ahead.
