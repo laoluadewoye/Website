@@ -62,7 +62,31 @@ function boxing() {
         let team2 = 23 - team1;
 
         //Establishing the group pot
-        let groupPot = Math.floor(Math.random() * 27000) + 13000; //A pot from 13k to 40k
+        let groupPot = box;
+        groupPot =
+          groupPot +
+          Math.floor(
+            Math.floor(Math.random(box) + box * 0.5) *
+              team1 *
+              (1 + Math.random(1))
+          );
+        groupPot =
+          groupPot +
+          Math.floor(
+            Math.floor(Math.random(box) + box * 0.5) *
+              team2 *
+              (1 + Math.random(1))
+          );
+        alert("Group Pot is " + groupPot);
+        /*
+        Group Pot equation:
+
+           The average bet amount (around your bet)  * the amount of people on a team * pot multiplier that approaches 2
+                              OR
+          [Math.floor(Math.random(box) + box * 0.5)] *           [Team #]             *      [(1 + Math.random(1))]  
+
+
+        */
 
         //Win condition to match
         let winner = Math.floor(Math.random() * 2) + 1; //0 and 1 --> 1 and 2
@@ -97,7 +121,7 @@ function boxing() {
             );
             yourShare = Math.ceil(groupPot / team2);
           }
-          alert("Your share is $" + yourShare);
+          alert("Your share is $" + yourShare + " extra.");
           onHand = onHand + yourShare;
         } else {
           alert(
