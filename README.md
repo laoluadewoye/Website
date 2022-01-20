@@ -1,10 +1,10 @@
 To access the webpages, please manually copy the link and paste them into your web browser. 
 It will take you through the directory of my website to the starting webpages.
 
-# laoluadewoye.github.io/Main/Web_Pages/Directory_Folder/directory.html
+# https://laoluadewoye.github.io/Main/Web_Pages/Directory_Folder/directory.html
 If you want to go straight to the directory of my website to decide for yourself, go right ahead.
 
-# laoluadewoye.github.io/Main/index.html
+# https://laoluadewoye.github.io/Main/index.html
 This is the first ever page I made on my website. It leads to a simple calculator, and various other things I created to learn and practice HTML. 
 
 The current list of webpages is:
@@ -16,7 +16,7 @@ The current list of webpages is:
 
 
 
-# laoluadewoye.github.io/Money_Making_Game_VTwo/Main_Page/Game_index.html
+# https://laoluadewoye.github.io/Money_Making_Game_VTwo/Main_Page/Game_index.html
 This is a game I made completely from scratch. 
 It is a recreation of the Python game, as the average would prefer an actual website/User Interface than to play in a Command Line.
 It is being updated as frequent as I find errors in the game and if I desire to update/change the design.
