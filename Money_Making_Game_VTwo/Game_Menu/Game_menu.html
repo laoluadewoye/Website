@@ -17,7 +17,7 @@
     <!--Metadata-->
 
     <title>Money Game Menu</title>
-    <link rel="icon" href="https://laoluadewoye.github.io/Main/Pictures/Favicons/FMoney.ico" />
+    <link rel="icon" href="https://laoluadewoye.github.io/Main/Pictures/Favicons/FMoney.ico"/>
 
     <!--CSS Stylesheet-->
     <link
@@ -133,7 +133,7 @@
         <h3>This option lets you take out money from your bank account</h3>
         <h3>Input amount below:</h3>
         <input
-          type="text"
+          type="number"
           name="withdrawAmount"
           placeholder="100"
         /><br /><br />
@@ -147,7 +147,11 @@
         <h1>Bank Deposit</h1>
         <h3>This option lets you put your on hand money into the bank</h3>
         <h3>Input amount below:</h3>
-        <input type="text" name="depositAmount" placeholder="100" /><br /><br />
+        <input
+          type="number"
+          name="depositAmount"
+          placeholder="100"
+        /><br /><br />
         <button id="submitD" class="submitbuttons">Submit</button>
         <br />
       </div>
@@ -162,7 +166,7 @@
         </h3>
         <h3>You can only transfer money through your bank account</h3>
         <h3>Input amount below:</h3>
-        <input type="text" name="TransferAmount" placeholder="All of it" />
+        <input type="number" name="TransferAmount" placeholder="All of it" />
         <br /><br />
         <h3>Name of Recepient/Receipent Organization:</h3>
         <textarea
@@ -239,7 +243,7 @@
             <h3>
               Enter an amount below and hit the button to find out if you won!
             </h3>
-            <input type="text" name="doubleAmount" placeholder="200" />
+            <input type="number" name="doubleAmount" placeholder="200" />
             <br />
             <br />
             <button id="submitDoub" class="submitbuttons">Slot Button</button>
@@ -301,13 +305,13 @@
             <h3>Minimum Pot is 500 dollars.</h3>
             <h3>Who are you betting on (Fighter 1 or 2?):</h3>
             <input
-              type="text"
+              type="number"
               name="pickFighter"
               placeholder="1"
               title="Put the number 1 or 2 inside."
             />
             <h3>Input amount of your pot below:</h3>
-            <input type="text" name="FightAmount" placeholder="501" />
+            <input type="number" name="FightAmount" placeholder="501" />
             <br />
             <br />
             <button id="submitBox" class="submitbuttons">Enter</button>
@@ -330,7 +334,7 @@
             <p>I won't judge.</p>
             <h3>Enter an amount below:</h3>
             <input
-              type="text"
+              type="number"
               name="bigPot"
               placeholder="Empty your pockets NOW"
             />
@@ -357,10 +361,10 @@
           Chose the percentage of your paycheck you want going to the bank:
         </h3>
         <input
-          type="text"
+          type="number"
           name="workPerc"
           placeholder="50"
-          title="Put a number from 0-100. Do not use %."
+          title="Put a number from 0-100. No need to add '%'"
         />
         <br /><br />
         <button
@@ -388,7 +392,7 @@
           value="Removed"
         />Remove
         <h3>Input amount below:</h3>
-        <input type="text" name="SavingsAmount" placeholder="300" />
+        <input type="number" name="SavingsAmount" placeholder="300" />
         <br /><br />
         <button
           id="submitS"
@@ -413,43 +417,46 @@
         <!--This will have all messages moved here-->
         <h3 id="message">This is a stat editing menu!</h3>
         <p>You come here whenever you want to set your own starting point.</p>
-        <p>Or maybe you just want to continue off from a previous tab.</p>
+        <p>Or maybe you just want to continue off from a previous session.</p>
         <p>Or maybe you want to be in creative mode.</p>
         <p>
           Whatever it is, press <strong>Submit</strong> to submit any changes.
         </p>
         <p>
-          If you wanna keep the values that are already on the screen, just exit out
-          of the menu with the corner 'X'
+          The submit button will not work unless you have all the fields filled
+          in. Negative inputs would be automatically assigned zero.
         </p>
-        <p>Incorrect or empty inputs would be automatically assigned zero.</p>
+        <p>
+          You can use <em>Get Last Save</em> to resume from a previous session.
+        </p>
+        <p><em>Clear Save</em> deletes all of your data, so be careful.</p>
 
         <!--User enters stats-->
         <div class="popupflexinputs">
           <h4>Day</h4>
           <input
-            type="text"
+            type="number"
             name="customday"
             id="customday"
             placeholder="Enter number (i.e. 5)"
           />
           <h4>On Hand Cash</h4>
           <input
-            type="text"
+            type="number"
             name="customhand"
             id="customhand"
             placeholder="Enter number (i.e. 1000)"
           />
           <h4>Bank Amount</h4>
           <input
-            type="text"
+            type="number"
             name="custombank"
             id="custombank"
             placeholder="Enter number (i.e. 500)"
           />
           <h4>Savings</h4>
           <input
-            type="text"
+            type="number"
             name="customsave"
             id="customsave"
             placeholder="Enter number (i.e. 500)"
@@ -457,6 +464,8 @@
           <br />
           <br />
           <button id="submitCustom" class="submitbuttons">Submit</button>
+          <button id="retriveLocal" class="submitbuttons">Get Last Save</button>
+          <button id="resetLocal" class="submitbuttons">Clear Save</button>
         </div>
       </div>
     </div>
@@ -466,6 +475,7 @@
     <script src="Game_menu.js"></script>
 
     <!--Game execution folder-->
+    <script src="Game_Execution/Game_basic_execution.js"></script>
     <script src="Game_Execution/Game_main_execution.js"></script>
     <script src="Game_Execution/Game_work_execution.js"></script>
     <script src="Game_Execution/Game_gamble_execution.js"></script>
