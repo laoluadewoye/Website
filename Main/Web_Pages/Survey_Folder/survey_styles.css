@@ -4,39 +4,42 @@ body {
 
 /*Makes main heading sticky*/
 .sticky {
-  height: 70px;
-  position: -webkit-sticky;
+  position: -webkit-sticky; 
   position: sticky;
   top: 0;
   z-index: 2; /*Places sticky heading over heading 3 line*/
 }
 
-/*Title of page*/
+/*Formating Sticky Heading*/
+.center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
+section {
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Formating Sticky Heading*/
+
+/*Title and Buttons*/
 h1 {
-  text-align: center;
   border: 10px solid lightblue;
   background-color: lightblue;
-  padding: 10px;
   border-radius: 50px;
   font-family: Arial;
   color: rgb(247, 252, 255);
-}
-
-/*Start of Placing Buttons*/
-.container {
-  height: 60px;
-  position: relative;
-  top: -85px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 20%;
+  font-size: 50px;
 }
 
 #home {
   position: relative;
   width: 200px;
-  right: 130%;
   height: 50px;
   border-radius: 50px;
   background-color: rgb(255, 204, 153);
@@ -47,9 +50,7 @@ h1 {
 
 #direct {
   position: relative;
-  top: -50px;
   width: 200px;
-  left: 170%;
   height: 50px;
   border-radius: 50px;
   background-color: rgb(0, 153, 255);
@@ -57,10 +58,11 @@ h1 {
   font-weight: bold;
   font-size: 18px;
 }
-/*End of Placing Buttons*/
+/*Title and Buttons*/
 
 h3 {
   position: relative;
+  margin-top: 80px;
   color: red;
   font-size: 28px;
   text-align: center;
@@ -111,4 +113,18 @@ textarea {
   color: white;
   font-weight: bold;
   padding: 30px 15px;
+}
+
+@media (max-width: 770px) {
+  .center {
+    flex-direction: column;
+  }
+
+  #home {
+    margin-top: 20px;
+  }
+
+  #direct {
+    margin-bottom: 20px;
+  }
 }

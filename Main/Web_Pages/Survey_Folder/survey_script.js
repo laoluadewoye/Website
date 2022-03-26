@@ -40,13 +40,12 @@ function main() {
     "\r\n\n"; 
 
   fs.writeFile("survey_file.txt", data, (err) => {
-    if (err) throw err;
+    if (err) {
+      alert("There was an error confirming data.");
+      return;
+    }
   });
 
-  /*
-        try using this site later
-        https://www.encodedna.com/javascript/how-to-save-form-data-in-a-text-file-using-javascript.htm
-    */
 }
 
 function handleForm(event) {
